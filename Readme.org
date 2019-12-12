@@ -1,0 +1,17 @@
+* What is this?
+
+[[https://travis-ci.com/pmiddend/udpretty.svg?branch=master][https://travis-ci.com/pmiddend/udpretty.svg?branch=master]]
+
+This is a tool to generate a PDF containing a detailed summary of a specific year from your diary.
+
+It’s based on [[https://play.google.com/store/apps/details?id=ru.schustovd.diary&hl=en][SBP Apps' Universum]] app, which is an excellent Android App to write a journal in.
+
+Building is currently only possible using the [[https://nixos.org/][Nix package manager]]. Using that, it’s easy though:
+
+#+begin_example
+nix-build
+#+end_example
+
+Then you can execute the resulting program, giving it the =data.pr= file (that you get from your Diary backup) on standard input. It produces a =.tex= file containing your year in review.
+
+Note that you have to have the =pgf-pie= package installed to build it. Also, you have to rename all photos in the =Photos= directory to have the =.jpg= file ending.
